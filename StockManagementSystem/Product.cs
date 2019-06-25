@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace StockManagementSystem
 {
-    class Product
+    public class Product
     {
+        public int Id { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 F:\BITM\StockManagementSystem\StockManagementSystem\bin\Debug\StockManagementSystem.exe.config
 F:\BITM\StockManagementSystem\StockManagementSystem\bin\Debug\StockManagementSystem.exe
 F:\BITM\StockManagementSystem\StockManagementSystem\bin\Debug\StockManagementSystem.pdb
-F:\BITM\StockManagementSystem\StockManagementSystem\obj\Debug\StockManagementSystem.csprojResolveAssemblyReference.cache
 F:\BITM\StockManagementSystem\StockManagementSystem\obj\Debug\StockManagementSystem.Properties.Resources.resources
 F:\BITM\StockManagementSystem\StockManagementSystem\obj\Debug\StockManagementSystem.csproj.GenerateResource.Cache
 F:\BITM\StockManagementSystem\StockManagementSystem\obj\Debug\StockManagementSystem.exe
