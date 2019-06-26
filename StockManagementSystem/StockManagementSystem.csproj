@@ -45,11 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\CategoryManager.cs" />
+    <Compile Include="BLL\CompanyManager.cs" />
     <Compile Include="CategorySetupUi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CategorySetupUi.Designer.cs">
       <DependentUpon>CategorySetupUi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanySetupUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanySetupUi.Designer.cs">
+      <DependentUpon>CompanySetupUi.cs</DependentUpon>
     </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
@@ -58,12 +65,17 @@
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Company.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\CompanyRepository.cs" />
     <EmbeddedResource Include="CategorySetupUi.resx">
       <DependentUpon>CategorySetupUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanySetupUi.resx">
+      <DependentUpon>CompanySetupUi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +87,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\StockManagementSystem.Models.Category.datasource" />
+    <None Include="Properties\DataSources\StockManagementSystem.Models.Company.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
