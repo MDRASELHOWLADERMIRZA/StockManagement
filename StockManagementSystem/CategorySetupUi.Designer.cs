@@ -28,15 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ShowCategoryDataGridView = new System.Windows.Forms.DataGridView();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CategoryNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.eventLog1 = new System.Diagnostics.EventLog();
-            this.ShowCategoryDataGridView = new System.Windows.Forms.DataGridView();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShowCategoryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -52,6 +58,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Category Setup";
             // 
+            // ShowCategoryDataGridView
+            // 
+            this.ShowCategoryDataGridView.AutoGenerateColumns = false;
+            this.ShowCategoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ShowCategoryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SL,
+            this.categoryIDDataGridViewTextBoxColumn,
+            this.categoryNameDataGridViewTextBoxColumn});
+            this.ShowCategoryDataGridView.DataSource = this.categoryBindingSource;
+            this.ShowCategoryDataGridView.Location = new System.Drawing.Point(32, 137);
+            this.ShowCategoryDataGridView.Name = "ShowCategoryDataGridView";
+            this.ShowCategoryDataGridView.Size = new System.Drawing.Size(399, 172);
+            this.ShowCategoryDataGridView.TabIndex = 3;
+            // 
             // SaveButton
             // 
             this.SaveButton.Location = new System.Drawing.Point(277, 85);
@@ -60,6 +80,7 @@
             this.SaveButton.TabIndex = 2;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // CategoryNameTextBox
             // 
@@ -81,13 +102,27 @@
             // 
             this.eventLog1.SynchronizingObject = this;
             // 
-            // ShowCategoryDataGridView
+            // categoryBindingSource
             // 
-            this.ShowCategoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ShowCategoryDataGridView.Location = new System.Drawing.Point(32, 137);
-            this.ShowCategoryDataGridView.Name = "ShowCategoryDataGridView";
-            this.ShowCategoryDataGridView.Size = new System.Drawing.Size(399, 172);
-            this.ShowCategoryDataGridView.TabIndex = 3;
+            this.categoryBindingSource.DataSource = typeof(StockManagementSystem.Models.Category);
+            // 
+            // SL
+            // 
+            this.SL.HeaderText = "SL";
+            this.SL.Name = "SL";
+            // 
+            // categoryIDDataGridViewTextBoxColumn
+            // 
+            this.categoryIDDataGridViewTextBoxColumn.DataPropertyName = "CategoryID";
+            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "CategoryID";
+            this.categoryIDDataGridViewTextBoxColumn.Name = "categoryIDDataGridViewTextBoxColumn";
+            this.categoryIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // categoryNameDataGridViewTextBoxColumn
+            // 
+            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
+            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "CategoryName";
+            this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
             // 
             // CategorySetupUi
             // 
@@ -97,10 +132,12 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CategorySetupUi";
             this.Text = "CategorySetup";
+            this.Load += new System.EventHandler(this.CategorySetupUi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShowCategoryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,5 +150,9 @@
         private System.Windows.Forms.Label label1;
         private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.DataGridView ShowCategoryDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
     }
 }
