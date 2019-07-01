@@ -47,6 +47,7 @@
     <Compile Include="BLL\CategoryManager.cs" />
     <Compile Include="BLL\CompanyManager.cs" />
     <Compile Include="BLL\ItemManager.cs" />
+    <Compile Include="BLL\StockInManager.cs" />
     <Compile Include="CategorySetupUi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +81,13 @@
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\CompanyRepository.cs" />
     <Compile Include="Repository\ItemRepository.cs" />
+    <Compile Include="Repository\StockInRepository.cs" />
+    <Compile Include="StockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockIn.Designer.cs">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CategorySetupUi.resx">
       <DependentUpon>CategorySetupUi.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,8 +106,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StockIn.resx">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\StockManagementSystem.Models.Category.datasource" />
     <None Include="Properties\DataSources\StockManagementSystem.Models.Company.datasource" />
+    <None Include="Properties\DataSources\StockManagementSystem.Models.Item.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
