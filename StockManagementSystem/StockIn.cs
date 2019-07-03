@@ -1,4 +1,5 @@
 ﻿using StockManagementSystem.BLL;
+using StockManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,20 +38,45 @@ namespace StockManagementSystem
         }
         private void StockIn_Load(object sender, EventArgs e)
         {
+        
             LoadCategory();
             LoadCompany();
             LoadItem();
+            LoadStockItem();
         }
 
         private void itemComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int item = itemComboBox.SelectedIndex;
+            int item = Convert.ToInt32(itemComboBox.SelectedValue);
             LoadReorderLevel(item);
+            LoadAvailableQty(item);
         }
         private void LoadReorderLevel(int item)
         {
             reorderLevelTextBox.Text=_stockInManager.LoadReorderLevel(item).ToString();
 
         }
+        private void LoadAvailableQty(int item)
+        {
+            availableQuantityTextBox.Text = _stockInManager.LoadAvailableQty(item).ToString();
+
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Today;
+
+            StockInItem inItem = new StockInItem();
+            inItem.ItemId = Convert.ToInt32(itemComboBox.SelectedValue);
+            inItem.StockInQty = Convert.ToInt32(stockInTextBox.Text);
+            inItem.StockInDate = today.ToString();
+            _stockInManager.Save(inItem);
+        }
+
+        private void LoadStockItem()
+        {
+            StockedInItemDataGridView.DataSource = _stockInManager.LoadStockItem();
+        }
+
     }
 }

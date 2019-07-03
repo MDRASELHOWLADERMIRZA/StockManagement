@@ -59,6 +59,7 @@ namespace StockManagementSystem.Repository
 
         public DataTable LoadCompany()
         {
+            sqlConnection = new SqlConnection(connectionString);
             string query = @"Select * From Companies";
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();

@@ -1,4 +1,5 @@
-﻿using StockManagementSystem.Repository;
+﻿using StockManagementSystem.Models;
+using StockManagementSystem.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,9 +16,22 @@ namespace StockManagementSystem.BLL
         {
             return _stockInRepository.LoadItem();
         }
-        public DataTable LoadReorderLevel(int item)
+        public int LoadReorderLevel(int item)
         {
             return _stockInRepository.LoadReorderLevel(item);
+        }
+        public string LoadAvailableQty(int item)
+        {
+            return _stockInRepository.LoadAvailableQty(item);
+        }
+        public Boolean Save(StockInItem inItem)
+        {
+            return _stockInRepository.Save(inItem);
+        }
+
+        public DataTable LoadStockItem()
+        {
+            return _stockInRepository.LoadStockItem();
         }
     }
 }
