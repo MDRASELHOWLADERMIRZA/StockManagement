@@ -12,5 +12,7 @@ namespace StockManagementSystem.Models
         public int ItemId { get; set; }
         public int StockInQty { get; set; }
         public string StockInDate { get; set; }
+        //
+        public string ItemName { get; set; }
     }
 }

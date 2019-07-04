@@ -71,6 +71,7 @@ namespace StockManagementSystem
             inItem.StockInQty = Convert.ToInt32(stockInTextBox.Text);
             inItem.StockInDate = today.ToString();
             _stockInManager.Save(inItem);
+            LoadStockItem();
         }
 
         private void LoadStockItem()

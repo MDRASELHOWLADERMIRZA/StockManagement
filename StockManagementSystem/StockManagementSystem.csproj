@@ -95,6 +95,9 @@
     <EmbeddedResource Include="CompanySetupUi.resx">
       <DependentUpon>CompanySetupUi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Index.resx">
+      <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItemSetup.resx">
       <DependentUpon>ItemSetup.cs</DependentUpon>
     </EmbeddedResource>

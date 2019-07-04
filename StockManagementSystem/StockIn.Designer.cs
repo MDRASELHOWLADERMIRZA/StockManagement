@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.StockedInItemDataGridView = new System.Windows.Forms.DataGridView();
+            this.stockInIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockInDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockInQtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyComboBox = new System.Windows.Forms.ComboBox();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,10 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.stockInIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockInQtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockInDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StockedInItemDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockInItemBindingSource)).BeginInit();
@@ -85,18 +87,59 @@
             // 
             // StockedInItemDataGridView
             // 
+            this.StockedInItemDataGridView.AllowUserToOrderColumns = true;
             this.StockedInItemDataGridView.AutoGenerateColumns = false;
             this.StockedInItemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StockedInItemDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stockInIdDataGridViewTextBoxColumn,
             this.itemIdDataGridViewTextBoxColumn,
+            this.ItemName,
+            this.stockInDateDataGridViewTextBoxColumn,
             this.stockInQtyDataGridViewTextBoxColumn,
-            this.stockInDateDataGridViewTextBoxColumn});
+            this.Action});
             this.StockedInItemDataGridView.DataSource = this.stockInItemBindingSource;
-            this.StockedInItemDataGridView.Location = new System.Drawing.Point(24, 321);
+            this.StockedInItemDataGridView.Location = new System.Drawing.Point(6, 321);
             this.StockedInItemDataGridView.Name = "StockedInItemDataGridView";
-            this.StockedInItemDataGridView.Size = new System.Drawing.Size(474, 191);
+            this.StockedInItemDataGridView.Size = new System.Drawing.Size(443, 191);
             this.StockedInItemDataGridView.TabIndex = 28;
+            // 
+            // stockInIdDataGridViewTextBoxColumn
+            // 
+            this.stockInIdDataGridViewTextBoxColumn.DataPropertyName = "StockInId";
+            this.stockInIdDataGridViewTextBoxColumn.HeaderText = "StockInId";
+            this.stockInIdDataGridViewTextBoxColumn.Name = "stockInIdDataGridViewTextBoxColumn";
+            this.stockInIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // itemIdDataGridViewTextBoxColumn
+            // 
+            this.itemIdDataGridViewTextBoxColumn.DataPropertyName = "ItemId";
+            this.itemIdDataGridViewTextBoxColumn.HeaderText = "ItemId";
+            this.itemIdDataGridViewTextBoxColumn.Name = "itemIdDataGridViewTextBoxColumn";
+            this.itemIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ItemName
+            // 
+            this.ItemName.DataPropertyName = "ItemName";
+            this.ItemName.HeaderText = "ItemName";
+            this.ItemName.Name = "ItemName";
+            // 
+            // stockInDateDataGridViewTextBoxColumn
+            // 
+            this.stockInDateDataGridViewTextBoxColumn.DataPropertyName = "StockInDate";
+            this.stockInDateDataGridViewTextBoxColumn.HeaderText = "StockInDate";
+            this.stockInDateDataGridViewTextBoxColumn.Name = "stockInDateDataGridViewTextBoxColumn";
+            // 
+            // stockInQtyDataGridViewTextBoxColumn
+            // 
+            this.stockInQtyDataGridViewTextBoxColumn.DataPropertyName = "StockInQty";
+            this.stockInQtyDataGridViewTextBoxColumn.HeaderText = "StockInQty";
+            this.stockInQtyDataGridViewTextBoxColumn.Name = "stockInQtyDataGridViewTextBoxColumn";
+            // 
+            // Action
+            // 
+            this.Action.DataPropertyName = "StockInId";
+            this.Action.HeaderText = "Action";
+            this.Action.Name = "Action";
             // 
             // stockInItemBindingSource
             // 
@@ -236,31 +279,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Company";
             // 
-            // stockInIdDataGridViewTextBoxColumn
-            // 
-            this.stockInIdDataGridViewTextBoxColumn.DataPropertyName = "StockInId";
-            this.stockInIdDataGridViewTextBoxColumn.HeaderText = "StockInId";
-            this.stockInIdDataGridViewTextBoxColumn.Name = "stockInIdDataGridViewTextBoxColumn";
-            this.stockInIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // itemIdDataGridViewTextBoxColumn
-            // 
-            this.itemIdDataGridViewTextBoxColumn.DataPropertyName = "ItemId";
-            this.itemIdDataGridViewTextBoxColumn.HeaderText = "ItemId";
-            this.itemIdDataGridViewTextBoxColumn.Name = "itemIdDataGridViewTextBoxColumn";
-            // 
-            // stockInQtyDataGridViewTextBoxColumn
-            // 
-            this.stockInQtyDataGridViewTextBoxColumn.DataPropertyName = "StockInQty";
-            this.stockInQtyDataGridViewTextBoxColumn.HeaderText = "StockInQty";
-            this.stockInQtyDataGridViewTextBoxColumn.Name = "stockInQtyDataGridViewTextBoxColumn";
-            // 
-            // stockInDateDataGridViewTextBoxColumn
-            // 
-            this.stockInDateDataGridViewTextBoxColumn.DataPropertyName = "StockInDate";
-            this.stockInDateDataGridViewTextBoxColumn.HeaderText = "StockInDate";
-            this.stockInDateDataGridViewTextBoxColumn.Name = "stockInDateDataGridViewTextBoxColumn";
-            // 
             // StockIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,7 +322,9 @@
         private System.Windows.Forms.BindingSource stockInItemBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockInIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockInQtyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockInDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockInQtyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Action;
     }
 }

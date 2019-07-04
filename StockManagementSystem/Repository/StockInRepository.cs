@@ -87,7 +87,7 @@ namespace StockManagementSystem.Repository
         public DataTable LoadStockItem()
         {
 
-            string query = @"Select * From StockInItems";
+            string query = @"Select s.ItemId,i.ItemName,i.ReorderLevel,s.StockInQty,s.StockInDate From StockInItems as s INNER JOIN Items as i ON s.ItemId=i.ItemId";
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
 
